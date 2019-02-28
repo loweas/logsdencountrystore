@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--add required stylesheets-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
     <!-- Bootstrap core CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
     <!--animation-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -21,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
 
     <!--story map plugin-->
-    <script src="dist/storymap.2.3.js"></script>
+    <script src="dist/storymap.2.5.js"></script>
 
 
 
@@ -148,17 +150,17 @@
     $('#storymap').storymap({
         scenes: scenes,
         layers: layers,
-        baselayer: layers.layer1,
+        baselayer: layers.layer2,
         navbar: false,
         legend: false,
-        loader: true,
+        loader: false,
         flyto: false,
         scalebar: true,
-        scrolldown: true,
+        scrolldown: false,
         progressline: true,
         navwidget: true,
         createMap: function () {
-            var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: false}).setView([44, -120], 7);
+            var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: true}).setView([44.757, -123.9], 12.5);
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
               maxZoom: 18,
               attribution: '<a target="_blank">Ashley Lowe</a>',
@@ -166,7 +168,7 @@
               detectRetina: true
 }).addTo(map);
 
-L.control.scale({position: 'bottomright', metric: false}).addTo(map);
+
             return map;
         }
     });
