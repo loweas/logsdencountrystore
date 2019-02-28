@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     font-family: 'Tangerine', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .cesium-viewer-cesiumWidgetContainer {
