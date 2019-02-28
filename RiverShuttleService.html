@@ -159,7 +159,14 @@
         navwidget: true,
         createMap: function () {
             var map = L.map($(".storymap-map")[0], {zoomControl: false, scrollWheelZoom: false}).setView([44, -120], 7);
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+              maxZoom: 18,
+              attribution: '<a target="_blank">Ashley Lowe</a>',
+              id: 'mapbox.outdoors',
+              detectRetina: true
+}).addTo(map);
 
+L.control.scale({position: 'bottomright', metric: false}).addTo(map);
             return map;
         }
     });
