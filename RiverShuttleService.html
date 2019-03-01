@@ -154,7 +154,7 @@
                     layer.on('mouseover', function() { layer.openPopup(); });
                     layer.on('mouseout', function() { layer.closePopup(); });
                 },  })},
-        layer3: {layer: L.geoJson.ajax('/assets/shuttle.geojson', {onEachFeature: function (feature, layer) {
+        layer3: {layer: L.geoJson.ajax('assets/shuttle.geojson', {onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.location );
                 layer.on('mouseover', function() { layer.openPopup(); });
                 layer.on('mouseout', function() { layer.closePopup(); });
