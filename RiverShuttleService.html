@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
     <!--add favicon for the web page-->
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
@@ -150,14 +154,16 @@
 
         layer2: {
             layer: L.geoJson.ajax('assets/stores.geojson', {onEachFeature: function (feature, layer) {
-                    layer.bindPopup(feature.properties.location  + "      " +feature.properties.Hours  );
+                    layer.bindPopup(feature.properties.location  +'<br/>'  + "Hours: " +feature.properties.Hours + '<br/>' +"Address: " +feature.properties.address   );
                     layer.on('mouseover', function() { layer.openPopup(); });
                     layer.on('mouseout', function() { layer.closePopup(); });
                 },  })},
         layer3: {layer: L.geoJson.ajax('assets/shuttle.geojson', {onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.location );
+                
                 layer.on('mouseover', function() { layer.openPopup(); });
                 layer.on('mouseout', function() { layer.closePopup(); });
+
             },  })}
 
 
@@ -167,8 +173,8 @@
 
     var scenes = {
         scene1: {lat: 44.757, lng: -123.9, zoom: 12, layers: [layers.layer1,layers.layer2], name: "scene1"},
-        scene2: {lat: 44.777, lng: -123.93, zoom: 12.4, layers: [layers.layer1,layers.layer3], name: "layer3"},
-        scene3: {lat: 44.777, lng: -123.93, zoom: 12.4, layers: [layers.layer1,layers.layer3], name: "layer3"}
+        scene2: {lat: 44.777, lng: -123.93, zoom: 12.4, layers: [layers.layer1,layers.layer3], name: "scene2"},
+        scene3: {lat: 44.7764564, lng: -123.837042, zoom: 16, layers: [layers.ESRI], name: "scene3"}
     };
 
 

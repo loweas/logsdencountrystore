@@ -3,7 +3,7 @@
 "name": "stores",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "location": "Logsden Store", "Lat": 44.74275, "Long": -123.7953696, "Hours": "M-S 8am-6pm Sun 8am-4pm" }, "geometry": { "type": "Point", "coordinates": [ -123.7953696, 44.74275 ] } },
-{ "type": "Feature", "properties": { "location": "Larry's Old Place", "Lat": 44.7231039, "Long": -123.9204426, "Hours": "M-F 8:30am-5pm" }, "geometry": { "type": "Point", "coordinates": [ -123.9204426, 44.7231039 ] } }
+{ "type": "Feature", "properties": { "location": "Logsden Store", "Lat": 44.74275, "Long": -123.7953696, "Hours": "M-S 8am-6pm Sun 8am-4pm","address":"214 N Gaither St, Siletz, OR 97380" }, "geometry": { "type": "Point", "coordinates": [ -123.7953696, 44.74275 ] } },
+{ "type": "Feature", "properties": { "location": "Larry's Old Place", "Lat": 44.7231039, "Long": -123.9204426, "Hours": "M-F 8:30am-5pm", "address":"7550 Logsden Rd. Logsden OR 97357" }, "geometry": { "type": "Point", "coordinates": [ -123.9204426, 44.7231039 ] } }
 ]
 }
