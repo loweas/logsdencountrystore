@@ -15,33 +15,60 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/gas.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
 </head>
-
+<style>
+.social {
+    position:fixed;
+    cursor: pointer;
+    font-size:24px;
+    color:darkgray;
+    z-index:1003;
+    top: 4%;
+    left:2px;
+}
+.social2 {
+    position:fixed;
+    cursor: pointer;
+    font-size:24px;
+    color:darkgray;
+    z-index:1003;
+    top: 4%;
+    left:30px;
+}
+.social:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+</style>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+      <a class="fab fa-facebook-square social" href="https://www.facebook.com/Logsden-Country-Store-145149642191251/" target="_blank"></a>
+      <a class="fab fa-instagram social2" href="https://www.instagram.com/logsdencountry/" target="_blank"></a>
+
       <a class="navbar-brand" href="index.html">Logsden, Oregon</a>
+
+
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="history.html">History</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+
           <li class="nav-item dropdown">
-      <!--      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Portfolio
-            </a> -->
+        <!--- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Portfolio
+        </a> --->
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
               <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
               <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
@@ -56,27 +83,18 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
               <a class="dropdown-item" href="RiverShuttleService.html">Shuttle Services</a>
-              <a class="dropdown-item" href="blog-home-2.html">River Guides</a>
+              <a class="dropdown-item" href="blog-home-2.html">River Guide</a>
               <a class="dropdown-item" href="moonshine.html">Moonshine Park</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="404.html">404</a>
-              <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
+          <li class="nav-item dropdown">
         </ul>
       </div>
     </div>
   </nav>
-
   <!-- Page Content -->
   <div class="container">
 
@@ -115,7 +133,7 @@
           <img class="card-img-top" src="img/chris.jpg" alt="">
           <div class="card-body">
             <h4 class="card-title">Chris Mann</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Morning Chris</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Coffee Aficionado</h6>
             <p class="card-text">Stop in and see Chris week mornings! She has been employeed with us since 2000.</p>
           </div>
           <div class="card-footer">
@@ -128,7 +146,7 @@
           <img class="card-img-top" src="img/roxy.jpg" alt="">
           <div class="card-body">
             <h4 class="card-title">Roxanna Johnson</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Roxy the Riveret</h6>
             <p class="card-text">Stop in and see Roxy week afternoons! She has been employeed with us since 2007.</p>
           </div>
           <div class="card-footer">
@@ -141,7 +159,7 @@
           <img class="card-img-top" src="http://placehold.it/750x450" alt="">
           <div class="card-body">
             <h4 class="card-title">Sue </h4>
-            <h6 class="card-subtitle mb-2 text-muted">Poistion</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Deli Artiste</h6>
             <p class="card-text">Sue works many days and kicks but by keeping the deli up todate. She has been with us since 2000.</p>
           </div>
           <div class="card-footer">
@@ -151,10 +169,10 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <img class="card-img-top" src="img/tesha.jpeg" alt="">
           <div class="card-body">
             <h4 class="card-title">Tesha Socha </h4>
-            <h6 class="card-subtitle mb-2 text-muted">Poistion</h6>
+            <h6 class="card-subtitle mb-2 text-muted">The Entrepreneur</h6>
             <p class="card-text">Tesha is our local Shuttle Lady and also can be seen working evenings.</p>
           </div>
           <div class="card-footer">
