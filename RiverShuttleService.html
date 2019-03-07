@@ -170,7 +170,7 @@
               <div class="fullscreen text-left">
               <h1 class="">Twin Bridges <small style="color: rgba(255,255,255,0.95)"></br>Drift to Hee Hee Illahe Park $20 </br>
                           Park Amenities</br>
-                          Batroom and Picnic Tables </br>
+                          Bathroom and Picnic Tables </br>
                           NO Camping
                         </small></h1>
 
@@ -233,8 +233,8 @@ var stores_icon = L.geoJson.ajax('assets/stores.geojson', {
       },
       onEachFeature: function (feature, layer) {
                       if (feature.properties.location == "Logsden Store"){
-                        return layer.bindPopup(feature.properties.location + "</br>"+feature.properties.Hours +"</br>"+'<img src="img/logsdencountry.jpg" alt="" style="width:300px;height:200px;">' , {sticky: true, className: "feature-tooltip"});
-                  }else {        return layer.bindPopup(feature.properties.location + "</br>"+feature.properties.Hours +"</br>"+'<img src="img/Logsden 069.jpg" alt="" style="width:300px;height:200px;">' , {sticky: true, className: "feature-tooltip"});
+                        return layer.bindTooltip(feature.properties.location + "</br>"+feature.properties.Hours +"</br>"+feature.properties.phone+"</br>"+'<img src="img/logsdencountry.jpg" alt="" style="width:300px;height:200px;">' , {sticky: true, className: "feature-tooltip"});
+                  }else {        return layer.bindTooltip(feature.properties.location + "</br>"+feature.properties.Hours+"</br>"+feature.properties.phone+"</br>"+'<img src="img/Logsden 069.jpg" alt="" style="width:300px;height:200px;">' , {sticky: true, className: "feature-tooltip"});
 
                 }
 
