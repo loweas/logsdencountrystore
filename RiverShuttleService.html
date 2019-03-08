@@ -86,6 +86,34 @@
       color: darkblue;
       text-decoration: none;
   }
+  .btn {
+  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-family: 'Varela Round';
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  border: 0;
+}
+
+.btn-primary {
+  background-color: #64a19d;
+}
+
+.btn-primary:hover {
+  background-color: #4f837f;
+}
+
+.btn-primary:focus {
+  background-color: #4f837f;
+  color: white;
+}
+
+.btn-primary:active {
+  background-color: #467370 !important;
+}
+
 
   </style>
   <body>
@@ -197,7 +225,9 @@
           </div>
         </section>
         <section data-scene="scene7" data-background="img/morgan.jpg">
+          <a href="interactive.html" class="btn btn-primary js-scroll-trigger">Interactive Map</a>
           <div class="fullscreen text-right">
+
           <h1 class="">Morgan Park <small style="color: rgba(255,255,255,0.95)"></br>Drift to Strom $20 </br>
                       Park Amenities</br>
                       Picnic Restrooms  </br>
