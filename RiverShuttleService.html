@@ -86,34 +86,22 @@
       color: darkblue;
       text-decoration: none;
   }
-  .btn {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
-  border: 0;
-}
+  .button {
+    position: absolute;
+    background-color: #64a19d;
+    border: none;
+    top: 50%;
+    left: 50%;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-.btn-primary {
-  background-color: #64a19d;
-}
-
-.btn-primary:hover {
-  background-color: #4f837f;
-}
-
-.btn-primary:focus {
-  background-color: #4f837f;
-  color: white;
-}
-
-.btn-primary:active {
-  background-color: #467370 !important;
-}
-
+  .button:hover {
+    background-color: #4f837f;
+  }
 
   </style>
   <body>
@@ -127,17 +115,20 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+    </li>
+      <li class="nav-item">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//loweas.github.io/storymap/RiverShuttleService.html">Share on Facebook</a>
+  </li>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="history.html">History</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+
           <li class="nav-item dropdown">
         <!--- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Portfolio
         </a> --->
@@ -161,7 +152,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -196,6 +187,7 @@
             </section>
             <section data-scene="scene4" data-background="img/twin.jpg">
               <div class="fullscreen text-left">
+
               <h1 class="">Twin Bridges <small style="color: rgba(255,255,255,0.95)"></br>Drift to Hee Hee Illahe Park $20 </br>
                           Park Amenities</br>
                           Bathroom and Picnic Tables </br>
@@ -225,9 +217,9 @@
           </div>
         </section>
         <section data-scene="scene7" data-background="img/morgan.jpg">
-          <a href="interactive.html" class="btn btn-primary js-scroll-trigger">Interactive Map</a>
-          <div class="fullscreen text-right">
 
+          <div class="fullscreen text-right">
+            <button class="button"  onclick="window.location.href='contact.html'">Contact Info</button>
           <h1 class="">Morgan Park <small style="color: rgba(255,255,255,0.95)"></br>Drift to Strom $20 </br>
                       Park Amenities</br>
                       Picnic Restrooms  </br>
