@@ -35,6 +35,8 @@ This page has a embedded map provided from [MapBox](www.mapbox.com) designed by 
 The GPS coordinates where collected from google and compiled into a geojson file in QGIS.
 
 ## Assignment Addons
-Google font was used to redesign the body font used.
-
-A favicon of a gas station (Reuseable image google search) was placed in the upper tab of the website.
+* Google font was used to redesign the body font used.
+* A favicon of a gas station (Reuseable image google search) was placed in the upper tab of the website.
+* Photos where taken at each boat launch location within the storymap.
+* The last photo a button was added to take you to the contact page.
+* Acknowledgement - [MapBox](www.mapbox.com) [business modern template](https://startbootstrap.com/templates/modern-business/) [Logsden Store](www.logsdencountrystore.com)
