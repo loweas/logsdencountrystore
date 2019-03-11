@@ -16,11 +16,11 @@ A brief history of Logsden written by my mother Carol.
 ## Local Services
 ### Interactive map
 ### Scene 1
-This is the section that is composed of the story map. To explore pratical usages of storymap telling, I choose to provide information on the small river shuttle service provide by a local resident, Tesha Socha. She provides two locations to pick up an envolope and deposit a key and payment for fishermen/drifters of the Siletz River. The first map shows the location of the two drop off locations.
+This is the section that is composed of the story map. To explore storymap telling, I choose to provide information on the small river shuttle service provide by a local resident, Tesha Socha. She provides two locations to pick up an envelope and deposit a key and payment for fishermen/drifters of the Siletz River. The first map shows the location of the two drop-off locations.
 * Hover Over Icon to reveal photo and location info!
 
 #### Scene 2
-The next scene is the boat launch locations where Tesha picks up and drops off vehicles. General information on how much her services cost.
+The next scene is the boat launch locations of pick-ups and drop-offs. General information on how much her services cost.
 * Hover over boat launch icon to reveal photo of the actual boat launch! <img src="img/boat-launch.svg" alt="" width="30" height="40">
 
 #### Scene 3-6
@@ -33,6 +33,16 @@ This page has a embedded map provided from [MapBox](www.mapbox.com) designed by 
 
 ## Data
 The GPS coordinates where collected from google and compiled into a geojson file in QGIS.
+
+## Libraries
+leaflet
+google font
+font awesome
+[bo zhao](https://github.com/jakobzhao/storymap) storymap.css and .js
+bootstrap.js
+chroma.js
+[business modern template](https://startbootstrap.com/templates/modern-business/)
+[MapBox](www.mapbox.com)
 
 ## Assignment Addons
 * Google font was used to redesign the body font used.
