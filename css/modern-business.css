@@ -21,3 +21,42 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.social {
+    position:fixed;
+    cursor: pointer;
+    font-size:24px;
+    color:darkgray;
+    z-index:1003;
+    top: 1%;
+    left:2px;
+}
+.social2 {
+    position:fixed;
+    cursor: pointer;
+    font-size:24px;
+    color:darkgray;
+    z-index:1003;
+    top: 1%;
+    left:30px;
+}
+.social:hover {
+    color: darkblue;
+    text-decoration: none;
+}
+.button {
+  position: absolute;
+  background-color: #64a19d;
+  border: none;
+  top: 50%;
+  left: 50%;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #4f837f;
+}
