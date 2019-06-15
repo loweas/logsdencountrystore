@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Smith Rock</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="please add">
+  <!-- CSS Base -->
+  <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="shortcut icon" href="img/gas.ico" type="image/x-icon">
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/webslides.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/webslides.min.js"></script>
+<script src="https://unpkg.com/d3@5/dist/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+  <script type="text/javascript" src="js/chroma.js"></script>
+
+
+</head>
+
+<body>
+  <article id="webslides">
+    <section class="fullscreen">
+
+      <div class="card-60">
+        <div class="flex-content" style="background: #FAFAF8">
+          <h3>Siletz River Shuttle</h3>
+      <h4>General Information</h4>
+      <p>Local resident, Tesha Socha, provides a shuttle service up and down the Siletz River. Her number is 541-444-1111.</p>
+      <p>It is advised you call ahead in off season as the shuttle service may not be available. Additionally, if you plan a drift after 11:00 a.m., it would be a good idea to make plans with Tesha either the day before or early in the morning of
+        your planned drift. </p>
+      </div>
+    </div>
+    </section>
+    <section class="fullscreen">
+      <div id="mymap"></div>
+      <div class="card-60">
+        <div class="flex-content" style="background: #FAFAF8">
+          <h3>Envelope drop Off Locations</h3>
+          <p>Shuttle dropbox/envelopes are available outside the Logsden Country Store.'<img src="img/logsdencountry.jpg" alt="" > In Siletz : Larry’s Old Place (a mechanic shop) '<img src="img/Logsden 069.jpg" alt="" > The price is noted on the envelope and you will want to be
+            sure to include the money and the key inside. She does not accept checks. </p>
+        </div>
+      </div>
+    </section>
+    <section class="fullscreen">
+      <div class="card-60">
+    <div id="mymap2"></div>
+      <div class="flex-content" style="background: #FAFAF8">
+        <h3>Boat Launch Locations</h3>
+        <p> </p>
+      </div>
+    </div>
+  </section>
+  </article>
+    <script>
+    var colors = chroma.scale('Dark2').mode('lch').colors(10);
+    for (i = 1; i < 11; i++) {
+      $('html > head').append($("<style> .marker-icon-" + i.toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+    }
+    var map = L.map("mymap", {
+      zoomControl: false,
+      scrollWheelZoom: false
+    }).setView([44.757, -124.05], 10);
+
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+      id: 'mapbox.outdoors', detectRetina: true,
+      maxZoom: 19
+    }).addTo(map);
+
+    var stores_icon = L.geoJson.ajax('assets/stores.geojson', {
+      pointToLayer: function(feature, latlng) {
+        if (feature.properties.location == "Logsden Store") {
+          return L.marker(latlng, {
+            icon: L.divIcon({
+              html: '<i class="fa fa-store fa-3x"></i>',
+              className: 'marker-icon-3',
+              iconSize: [20, 20]
+            })
+          });
+        } else {
+          return L.marker(latlng, {
+            icon: L.divIcon({
+              html: '<i class="fa fa-car fa-3x"></i>',
+              className: 'marker-icon-8',
+              iconSize: [20, 20]
+            })
+          });
+        }
+      },
+      onEachFeature: function(feature, layer) {
+        if (feature.properties.location == "Logsden Store") {
+          return layer.bindTooltip(feature.properties.location + "</br>" + feature.properties.Hours + "</br>" + feature.properties.phone + "</br>" , {
+            sticky: true,
+            className: "feature-tooltip",
+            permanent:true
+          });
+        } else {
+          return layer.bindTooltip(feature.properties.location + "</br>" + feature.properties.Hours + "</br>" + feature.properties.phone + "</br>" , {
+            sticky: true,
+            className: "feature-tooltip",
+            permanent: true
+          });
+
+        }
+
+      }
+    }).addTo(map);
+
+    var map2 = L.map("mymap2", {
+      zoomControl: false,
+      scrollWheelZoom: false
+    }).setView([44.757, -123.95], 13);
+
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+      id: 'mapbox.outdoors', detectRetina: true,
+      maxZoom: 19
+    }).addTo(map2);
+
+
+    var launch = L.geoJson.ajax('assets/shuttle.geojson', {
+      pointToLayer: function(feature, latlng) {
+        if (feature.properties.Icon == "1") {
+          return L.marker(latlng, {
+            icon: L.divIcon({
+              html: '<img src="img/boat-launch.svg" alt="" width="30" height="40">',
+              className: 'marker-icon-3',
+              iconSize: [20, 20]
+            })
+          });
+        }
+      },
+      onEachFeature: function(feature, layer) {
+        if (feature.properties.location == "Moonshine Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 020.jpg" alt="" style="width:300px;height:200px;">');
+        } else if (feature.properties.location == "Twin Bridges Memorial Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 028.jpg" alt="" style="width:300px;height:200px;">');
+        } else if (feature.properties.location == "Hee Hee Illahe Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 037.jpg" alt="" style="width:300px;height:200px;">');
+        } else if (feature.properties.location == "Old Mill Site Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/oldmill.jpg" alt="" style="width:300px;height:200px;">');
+        } else if (feature.properties.location == "Ojalla Bridge") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + '<img src="img/ojalla.jpg" alt="" style="width:300px;height:200px;">' + "</br>" + "REQUIRES A ROPE");
+        } else if (feature.properties.location == "Jack Morgan Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 049.jpg" alt="" style="width:300px;height:200px;">');
+        } else if (feature.properties.location == "Stome County Park") {
+          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 057.jpg" alt="" style="width:300px;height:200px;">');
+        }
+        layer.on('mouseover', function() {
+          layer.openPopup();
+        });
+        layer.on('mouseout', function() {
+          layer.closePopup();
+        });
+
+      },
+    }).addTo(map2);
+
+    ws = new WebSlides();
+        ws.el.addEventListener('ws:slide-change', function() {
+
+          crtDiv = $(".current div");
+    if (crtDiv.attr("id") === "mymap") {
+            map.invalidateSize();
+            //Fly to a new location.
+            map.flyTo([44.72, -123.95], 12, {
+              animate: true,
+              duration: 4
+            });
+            map.invalidateSize();
+
+          }
+          else if (crtDiv.attr("id") === "mymap2") {
+              map2.invalidateSize();
+
+        //new slide adjust for satellite 1 and 2
+      }
+    });
+
+
+
+
+    </script>
+</body>
+
+</html>

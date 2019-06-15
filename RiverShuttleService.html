@@ -18,7 +18,20 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/storymap.2.4.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<style>
+#info1 {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1px;
+  right: 1px;
+  color: white;
+  padding: 6px 8px;
+  background: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 
+}
+</style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -111,11 +124,13 @@
         </section>
         <section data-scene="scene3" data-background="img/moonshine.jpg">
           <div class="fullscreen text-right">
-            <h1 class="">Moonshine Park <small style="color: rgba(255,255,255,0.95)"></br>Drift down to Twin $20 </br>
+            <div id="info1">
+            <h1>Moonshine Park</12><h2> </br>Drift down to Twin $20</br>
                 Park Amenities and Fees </br>
                 Day Use $3 per Vehicle </br>
                 Overnight Camping $20
-              </small></h1>
+              </h2>
+            </div>
 
           </div>
         </section>
@@ -342,13 +357,10 @@
       scenes: scenes,
       layers: layers,
       baselayer: layers.layer1,
-      navbar: false,
-      legend: false,
-      loader: false,
-      flyto: false,
-      scalebar: true,
-      scrolldown: false,
-      progressline: true,
+      navbar: true,
+      legend: true,
+      scale: true,
+      scrolldown: true,
       navwidget: true,
       createMap: function() {
         var map = L.map($(".storymap-map")[0], {

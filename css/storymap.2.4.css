@@ -8,6 +8,19 @@ body {
     font-family: Cairo, sans-serif;
     font-size: 14px;
 }
+#info {
+  position: fixed;
+  z-index: 1000;
+  top: 1px;
+  right: 1px;
+  width: 300px;
+  color: white;
+  padding: 6px 8px;
+  background: transparent;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-family: "Varela Round";
+}
 
 .cesium-viewer-cesiumWidgetContainer {
     position: fixed;
@@ -241,8 +254,8 @@ video {
 .storymap-scroll-down {
     cursor: pointer;
     z-index: 1001;
-    font-size: 4vw !important;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 8vw !important;
+    color: 	#008080;
     text-shadow: 0 1px 1px rgba(197, 197, 197, 0.95);
 }
 
