@@ -3,12 +3,12 @@
 "name": "shuttle",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "long": -123.8370427, "lat": 44.7764602, "location": "Moonshine Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.8370427, 44.7764602 ] } },
+{ "type": "Feature", "properties": { "long": -123.8370427, "lat": 44.7764602, "location": "Moonshine Park", "Icon": 0 }, "geometry": { "type": "Point", "coordinates": [ -123.8370427, 44.7764602 ] } },
 { "type": "Feature", "properties": { "long": -123.8438008, "lat": 44.7326215, "location": "Twin Bridges Memorial Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.8438008, 44.7326215 ] } },
 { "type": "Feature", "properties": { "long": -123.919245, "lat": 44.7191593, "location": "Hee Hee Illahe Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.919245, 44.7191593 ] } },
 { "type": "Feature", "properties": { "long": -123.9157314, "lat": 44.7250403, "location": "Old Mill Site Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.9157314, 44.7250403 ] } },
 { "type": "Feature", "properties": { "long": -123.9164682, "lat": 44.764009, "location": "Ojalla Bridge", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.9164682, 44.764009 ] } },
-{ "type": "Feature", "properties": { "long": -123.906374, "lat": 44.80068, "location": "Jack Morgan Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.906374, 44.80068 ] } },
+{ "type": "Feature", "properties": { "long": -123.906374, "lat": 44.80068, "location": "Jack Morgan Park", "Icon": 0 }, "geometry": { "type": "Point", "coordinates": [ -123.906374, 44.80068 ] } },
 { "type": "Feature", "properties": { "long": -123.9738045, "lat": 44.8139852, "location": "Stome County Park", "Icon": 1 }, "geometry": { "type": "Point", "coordinates": [ -123.9738045, 44.8139852 ] } }
 ]
 }

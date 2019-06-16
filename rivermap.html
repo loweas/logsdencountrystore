@@ -2,27 +2,27 @@
 <html lang="en">
 
 <head>
-  <title>Smith Rock</title>
+  <title>Shuttle Runs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="please add">
   <!-- CSS Base -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Work+Sans&display=swap" rel="stylesheet">  <!--facebook icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="shortcut icon" href="img/gas.ico" type="image/x-icon">
+
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/webslides.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/webslides.min.js"></script>
 <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
@@ -34,37 +34,207 @@
 </head>
 
 <body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="fab fa-facebook-square social fa-2x" href="https://www.facebook.com/Logsden-Country-Store-145149642191251/" target="_blank"></a>
+    <a class="fab fa-instagram social2 fa-2x" href="https://www.instagram.com/logsdencountry/" target="_blank"></a>
+
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html"><p>Logsden, Oregon</p></a>
+
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  </li>
+    <li class="nav-item">
+</li>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">History</a>
+          </li>
+
+          <li class="nav-item dropdown">
+        <!--- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Portfolio
+        </a> --->
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+              <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Local Services
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="RiverShuttleService.html">Shuttle Services</a>
+              <a class="dropdown-item" href="rivermap.html">Shuttle Service 2</a>
+              <a class="dropdown-item" href="moonshine.html">Moonshine Park</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+        </ul>
+      </div>
+    </div>
+  </nav>
   <article id="webslides">
     <section class="fullscreen">
-
       <div class="card-60">
         <div class="flex-content" style="background: #FAFAF8">
-          <h3>Siletz River Shuttle</h3>
+          <h2><b>Siletz River Shuttle</b></h2>
       <h4>General Information</h4>
       <p>Local resident, Tesha Socha, provides a shuttle service up and down the Siletz River. Her number is 541-444-1111.</p>
       <p>It is advised you call ahead in off season as the shuttle service may not be available. Additionally, if you plan a drift after 11:00 a.m., it would be a good idea to make plans with Tesha either the day before or early in the morning of
         your planned drift. </p>
       </div>
+      <figure>
+        <img src="img/siletzriver.jpg" alt="">
+      </figure>
     </div>
     </section>
     <section class="fullscreen">
       <div id="mymap"></div>
       <div class="card-60">
-        <div class="flex-content" style="background: #FAFAF8">
-          <h3>Envelope drop Off Locations</h3>
-          <p>Shuttle dropbox/envelopes are available outside the Logsden Country Store.'<img src="img/logsdencountry.jpg" alt="" > In Siletz : Larry’s Old Place (a mechanic shop) '<img src="img/Logsden 069.jpg" alt="" > The price is noted on the envelope and you will want to be
-            sure to include the money and the key inside. She does not accept checks. </p>
+        <div class="flex-content" style="background: #CCDDDD">
+          <h3><b>Envelope Locations</b></h3>
+          <h4>Logsden Country Store.<img src="img/logsdencountry.jpg" alt="" > Larry’s Old Place <img src="img/Logsden 069.jpg" alt="" > </h4>
         </div>
       </div>
     </section>
     <section class="fullscreen">
       <div class="card-60">
     <div id="mymap2"></div>
-      <div class="flex-content" style="background: #FAFAF8">
-        <h3>Boat Launch Locations</h3>
-        <p> </p>
-      </div>
+      <div class="flex-content" style="background: #BAC4B2">
+        <h2><b>Boat Launch Locations</b></h2>
+        <h3>Single Drifts -- $20 </br>
+        Double Drifts -- $40</h3>
+        <h4>The price is noted on the envelope and you will want to be
+          sure to include the money and the key inside. She does not accept checks. </h4>
+
+
     </div>
+    </div>
+  </section>
+  <section class="fullscreen">
+    <div class="card-50">
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Moonshine Park</h1><h3><i>Drift down to Twin $20 (Single Drift)</i></h3>
+            <h4>Park Amenities and Fees </h4>
+            <h5>Day Use $3 per Vehicle </br>
+            Overnight Camping $20
+          </h5>
+    </div>
+    <figure>
+      <img src="img/Logsden 020.jpg" alt="">
+    </figure>
+  </div>
+  </section>
+  <section class="fullscreen">
+    <div class="card-50">
+      <figure>
+        <img src="img/Logsden 028.jpg" alt="">
+      </figure>
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Twin Bridges</h1>
+      <h3>Drift to Hee Hee Illahe Park $20 </h3>
+            <h4>Park Amenities</h4>
+            <h5>Bathroom and Picnic Tables </br>
+            NO Camping
+          </h5>
+    </div>
+  </div>
+  </section>
+  <section class="fullscreen">
+    <div class="card-50">
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Hee Hee Illahe Park</h1>
+      <h3>Drift to Hee Hee Illahe Park $20 </h3>
+            <h4>Park Amenities</h4>
+            <h5>Bathroom and Picnic Tables </br>
+            NO Camping</h5>
+            <h4> Location </h4>
+            <h5> Siletz, OR 97380</h5>
+    </div>
+    <figure>
+      <img src="img/Logsden 037.jpg" alt="" >
+    </figure>
+  </div>
+  </section>
+  <section class="fullscreen">
+    <div class="card-50">
+      <figure>
+        <img src="img/oldmill.jpg" alt="" >
+      </figure>
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Old Mill Park </h1>
+      <h3>Drift to Ojalla Park $20  </h3>
+            <h4>Park Amenities</h4>
+            <h5>NO Camping
+          </h5>
+    </div>
+  </div>
+  </section>
+
+  <section class="fullscreen">
+    <div class="card-50">
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Ojalla Bridge Park </h1>
+      <h3>Drift to Jack Morgan Park $20</h3>
+            <h4>Park Amenities</h4>
+            <h5>Boat Slide ** Rope Required ** </br> Restrooms </br>
+              NO Camping</h5>
+            <h4> Location </h4>
+            <h5> Siletz, OR 97380</h5>
+    </div>
+    <figure>
+      <img src="img/ojalla.jpg" alt="" >
+    </figure>
+  </div>
+  </section>
+  <section class="fullscreen">
+    <div class="card-50">
+      <figure>
+        <img src="img/Logsden 049.jpg">
+      </figure>
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Jack Morgan Park</h1>
+      <h3>Drift to Ojalla Park $20  </h3>
+      <h4>Park Amenities</h4>
+      <h5>Picnic Restrooms </br>
+        Overnight Camping $20</h5>
+      <h4> Location </h4>
+            <h5>17519 Siletz Hwy, Siletz, OR 97380
+          </h5>
+    </div>
+  </div>
+  </section>
+
+  <section class="fullscreen">
+    <div class="card-50">
+      <div class="flex-content" style="background: #F5FFFA">
+        <h1>Stome County Park  </h1>
+      <h3></h3>
+            <h4>Park Amenities</h4>
+            <h5>Picnic Restrooms </br>
+              The area is Day Use Only with no fee for use.</h5>
+            <h4> Location </h4>
+            <h5> Strome Park, Siletz, OR 97380</h5>
+    </div>
+    <figure>
+      <img src="img/Logsden 057.jpg" alt="" >
+    </figure>
+  </div>
   </section>
   </article>
     <script>
@@ -125,7 +295,7 @@
     var map2 = L.map("mymap2", {
       zoomControl: false,
       scrollWheelZoom: false
-    }).setView([44.757, -123.95], 13);
+    }).setView([44.757, -124.0], 12.2);
 
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
@@ -144,23 +314,31 @@
               iconSize: [20, 20]
             })
           });
+        } else if (feature.properties.Icon == "0") {
+          return L.marker(latlng, {
+            icon: L.divIcon({
+              html: '<i class="fas fa-campground fa-2x"></i>',
+              className: 'marker-icon-3',
+              iconSize: [20, 20]
+            })
+          });
         }
       },
       onEachFeature: function(feature, layer) {
         if (feature.properties.location == "Moonshine Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 020.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         } else if (feature.properties.location == "Twin Bridges Memorial Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 028.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         } else if (feature.properties.location == "Hee Hee Illahe Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 037.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch",  );
         } else if (feature.properties.location == "Old Mill Site Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/oldmill.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         } else if (feature.properties.location == "Ojalla Bridge") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + '<img src="img/ojalla.jpg" alt="" style="width:300px;height:200px;">' + "</br>" + "REQUIRES A ROPE");
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         } else if (feature.properties.location == "Jack Morgan Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 049.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         } else if (feature.properties.location == "Stome County Park") {
-          return layer.bindTooltip(feature.properties.location + " Boat Launch" + "</br>" + '<img src="img/Logsden 057.jpg" alt="" style="width:300px;height:200px;">');
+          return layer.bindTooltip(feature.properties.location + " Boat Launch", );
         }
         layer.on('mouseover', function() {
           layer.openPopup();
@@ -172,7 +350,8 @@
       },
     }).addTo(map2);
 
-    ws = new WebSlides();
+    ws = new WebSlides({navigateOnScroll: false,
+    });
         ws.el.addEventListener('ws:slide-change', function() {
 
           crtDiv = $(".current div");
@@ -189,7 +368,7 @@
           else if (crtDiv.attr("id") === "mymap2") {
               map2.invalidateSize();
 
-        //new slide adjust for satellite 1 and 2
+
       }
     });
 
