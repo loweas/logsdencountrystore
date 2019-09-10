@@ -1,4 +1,4 @@
-# [Logsden Country Store](https://loweas.github.io/logsdencountrystore/)
+# [Logsden Country Store](https://www.logsdencountrystore.com/)
 # Example of a Story Map in Interactive Map
 This is the repository is an example of a storymap/website. It includes the structure of what will be the new website for my mothers small general store in Logsden Oregon. Previously, I had been hosting her website on Hostgator and had used a wordpress template to design the site. 
 
