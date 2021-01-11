@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Work+Sans&display=swap" rel="stylesheet">  <!--facebook icon-->
    <link rel="stylesheet" type="text/css" href="css/storymap.2.4.css">
@@ -268,11 +268,9 @@
     });
 
 
-
     var layers = {
-
       layer1: {
-        layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+        layer: L.tileLayer('https://api.mapbox.com/styles/v1/loweas/cjst6mi3c537k1ft6qwkumzwd.html?fresh=true&title=view&access_token=pk.eyJ1IjoibG93ZWFzIiwiYSI6ImNqczlhMzJqMjE1dDM0NG12dHBxam1lZjIifQ.Ox8goYypCr_cJCoDPgHTsQ', {
           id: 'mapbox.outdoors',
           detectRetina: true
         })
@@ -284,8 +282,6 @@
       launch: {
         layer: launch
       },
-
-
       layer3: {
         layer: L.geoJson.ajax('assets/shuttle.geojson', {
           onEachFeature: function(feature, layer) {
@@ -296,12 +292,9 @@
             layer.on('mouseout', function() {
               layer.closePopup();
             });
-
           },
         })
       },
-
-
     };
 
 
@@ -367,7 +360,7 @@
           zoomControl: false,
           scrollWheelZoom: false
         });
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+        L.tileLayer('https://api.mapbox.com/styles/v1/loweas/cjst6mi3c537k1ft6qwkumzwd/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibG93ZWFzIiwiYSI6ImNqczlhMzJqMjE1dDM0NG12dHBxam1lZjIifQ.Ox8goYypCr_cJCoDPgHTsQ', {
           maxZoom: 18,
           attribution: '<a target="_blank">Ashley Lowe</a>',
           id: 'mapbox.outdoors',
